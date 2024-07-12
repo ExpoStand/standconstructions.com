@@ -1,0 +1,18 @@
+{
+  "name": "standconstructions.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./temp/input.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "npx tailwindcss -i ./temp/input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4"
+  }
+}
