@@ -15,10 +15,11 @@
     background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/germany.jpg)no-repeat center/cover;
     background-attachment: fixed;
   } 
-  /* .hero-section{
-    background: linear-gradient(rgba(73, 205, 220, 0.6), rgba(0, 0, 0, 0.63));
+  .hero-section{
+    background: url(../images/banner_images/homebanner.png) no-repeat top center/cover;
   background-attachment: fixed;
-  } */
+ 
+  }
   .work-process{
     background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/2149908695.jpg)no-repeat  center/cover;
     background-attachment: fixed;
