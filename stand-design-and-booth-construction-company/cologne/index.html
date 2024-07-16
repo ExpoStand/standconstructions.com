@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/logos/fevicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/assets/images/logos/fevicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/assets/images/logos/fevicon-192x192.png" />
     <title>Exhibition Stand Designer, Builder &amp; Contractor in Cologne</title>
     <meta name="description"
         content="Stand Construction is a popular name of an exhibition stand design company in Cologne and a top choice of exhibitors for a successful showcase." />
@@ -53,7 +56,7 @@
         <div class="flex justify-around">
             <input type="checkbox" name="check" id="check">
             <div class="flex items-center">
-                <img src="assets/images/logos/header-logo.webp" alt="Expo Exhibit Logo" class="h-12"
+                <img src="/assets/images/logos/header-logo.webp" alt="Expo Exhibit Logo" class="h-12"
                     loading="eager">
             </div>
 
@@ -296,7 +299,7 @@
                             <i class="fa fa-angle-right border text-4xl absolute  left-3/4 border-s-4"></i>
 
 
-                            <img src="../assets/images/exhibition_images/exhibition-3.jpg" alt="exhibit_image"
+                            <img src="/assets/images/exhibition_images/exhibition-3.jpg" alt="exhibit_image"
                                 class="border border-500 p-3 rounded-2xl bg-white  bg-[url('/image')]" loading="lazy">
 
 
@@ -484,7 +487,7 @@
 
                         <h2 class="text-4xl text-gray mt-4 pb-5">POPULAR UPCOMING EXHIBITIONS IN COLOGNE
                         </h2>
-                        <p class="text-sm">You may be interested in showcasing at these upcoming exhibitions in Berlin.
+                        <p class="text-sm">You may be interested in showcasing at these upcoming exhibitions in COLOGNE
                         </p>
                     </div>
                     <div class="md:grid grid-cols-6 gap-4">
@@ -663,7 +666,7 @@
 
                     </div>
 
-                    <div class=" relative w-full min-h-screen p-3 bg-white  mt-20
+                    <div class=" relative w-full  p-3 bg-white  mt-20
             flex justify-center">
                         <span class="big-circle"></span>
                         <img src="img/shape.png" class="square" alt="" />
@@ -675,10 +678,8 @@
                                     specifications.
                                 </p>
 
-                                <div class="info">
-                                    <!-- <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d314920.7878434826!2d17.320758!3d51.928141!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47051778bd50658d%3A0x364c8487ecaf1e9b!2sPor%C4%99ba%2013A%2C%2063-233%20Por%C4%99ba%2C%20Poland!5e0!3m2!1sen!2sus!4v1720597334742!5m2!1sen!2sus"
-                                class="w-48 h-auto"></iframe> -->
+                                <div class="map_info">
+                                   
                                 </div>
 
                                 <div class="social-media">
@@ -705,17 +706,17 @@
                                 <span class="circle two"></span>
 
 
-                                <form action="index.html" autocomplete="off">
+                                <form action="index.html" autocomplete="off" id="contactForm2">
                                     <h3 class="title">Send Us a Message</h3>
 
                                     <div class="md:grid grid-cols-2 md:gap-4 ">
                                         <div class="input-container ">
-                                            <input type="text" name="name" class="input" />
+                                            <input type="text" name="contact_name" class="input" />
                                             <label for="">Contact Name</label>
                                             <span>Contact Name</span>
                                         </div>
                                         <div class="input-container">
-                                            <input type="text" name="name" class="input" />
+                                            <input type="text" name="company_name" class="input" />
                                             <label for="">Company Name</label>
                                             <span>Company Name</span>
                                         </div>
@@ -725,12 +726,12 @@
                                             <span>Email</span>
                                         </div>
                                         <div class="input-container">
-                                            <input type="text" name="exhibition-name" class="input" />
+                                            <input type="text" name="exhibition_name" class="input" />
                                             <label for="">Exhibition Name</label>
                                             <span>Exhibition Name</span>
                                         </div>
                                         <div class="input-container">
-                                            <input type="email" name="booth-size" class="input" />
+                                            <input type="text" name="booth_size" class="input" />
                                             <label for="">Booth Size</label>
                                             <span>Booth Size</span>
                                         </div>
@@ -742,8 +743,8 @@
 
                                     </div>
                                     <br>
-                                    <input type="file" name="file" required="required" aria-required="true"
-                                        multiple="multiple">
+                                    <input type="file" name="attachment" accept="image/*" required="required"
+                                        aria-required="true" multiple />
                                     <br>
                                     <br>
                                     <div class="input-container textarea">
@@ -751,7 +752,7 @@
                                         <label for="">Message</label>
                                         <span>Message</span>
                                     </div>
-                                    <input type="submit" value="Send" class="btn" />
+                                    <button type="submit" class="btn">submit</button>
                                 </form>
                             </div>
                         </div>
@@ -764,28 +765,26 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#000A93] px-[5%] text-white">
+    <footer class="bg-[#000A93] px-[5%] text-white ">
         <div class="grid md:grid-cols-12 mt-5 py-10 gap-5">
             <div class="col-span-3 flex flex-col gap-3">
-                <img src="../../assets/images/logos/footer-logo.webp" class="w-40" />
+                <img src="/assets/images/logos/footer-logo.webp" class="w-40" alt="footer-logo" loading="lazy" />
                 <div>
                     <p class="text-sm">
-                        Stand Constructions is one of the most well-known exhibitions stand builders in Europe, with
-                        equipment and products from Germany, UK, Netherlands, Italy and Spain. At Stand Constructions,
-                        custom and unique stands are created by our talented graphic designers, who carry your brand to
-                        world standards with years of knowledge and experience.
+                        Stand Constructions is one of the most well-known exhibitions stand builders in Europe, with equipment and products from Germany, UK, Netherlands, Italy and Spain. At Stand Constructions, custom and unique stands are created by our talented graphic designers,
+                        who carry your brand to world standards with years of knowledge and experience.
                     </p>
                 </div>
             </div>
             <div class="col-span-2">
                 <h4 class="text-2xl font-bold mb-2">Quick Links</h4>
                 <ul class="flex flex-col list-none gap-1">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Process</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="https://www.standconstructions.com/">Home</a></li>
+                    <li><a href="https://www.standconstructions.com/about-us/">About Us</a></li>
+                    <li><a href="https://www.standconstructions.com/#process">Process</a></li>
+                    <li><a href="https://www.standconstructions.com/#portfolio">Portfolio</a></li>
+                    <li><a href="https://www.standconstructions.com/blogs/">Blog</a></li>
+                    <li><a href="https://www.standconstructions.com/#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-span-2">
@@ -803,11 +802,11 @@
                 <div>
                     <h4 class="text-2xl font-bold mb-2">Major Countries</h4>
                     <ul class="flex flex-col gap-2 list-none">
-                        <li><a href="#">Stand Builder In Germany</a></li>
-                        <li><a href="#">Stand Builder In UK</a></li>
-                        <li><a href="#">Stand Builder In Spain</a></li>
-                        <li><a href="#">Stand Builder In Netherlands</a></li>
-                        <li><a href="#">Stand Builder In Italy</a></li>
+                        <li><a href="https://www.standconstructions.com/exhibition-stand-builder/germany/">Stand Builder In Germany</a></li>
+                        <li><a href="https://www.standconstructions.com/exhibition-stand-builder/uk/">Stand Builder In UK</a></li>
+                        <li><a href="https://www.standconstructions.com/exhibition-stand-builder/spain/">Stand Builder In Spain</a></li>
+                        <li><a href="https://www.standconstructions.com/exhibition-stand-builder/netherlands/">Stand Builder In Netherlands</a></li>
+                        <li><a href="https://www.standconstructions.com/exhibition-stand-builder/italy/">Stand Builder In Italy</a></li>
                     </ul>
                 </div>
             </div>
@@ -847,6 +846,7 @@
             </div>
         </div>
     </footer>
+
     <div class="bg-black text-center py-3">
         <p class="text-gray-400">Copyright © 2024 Stand Constructions by <a href="https://digitalfyx.com/"
                 class="text-white text-bold">Digitalfyx</a>. All Rights Reserved.</p>

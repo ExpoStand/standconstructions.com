@@ -667,7 +667,7 @@ header {
   color: var(--clr-light);
   padding: 0 .8rem;
   letter-spacing: 1px;
-  font-size: .95rem;
+  font-size:1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
