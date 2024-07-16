@@ -30,11 +30,11 @@
   }
 
   
-.ourwork{
+/* .ourwork{
  background:  linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/exhibition_images/exhibition-2.jpg)no-repeat center/cover;
  background-attachment: fixed;
 
-}
+} */
 .blurr_para{backdrop-filter: blur(12px);}
 
 .img-box img {
