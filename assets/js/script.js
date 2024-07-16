@@ -1,176 +1,3 @@
-// Start Navbar script for mobile toggle
-
-
-
-// document.getElementById('menu-toggle').addEventListener('click', function() {
-//     const menu = document.getElementById('mobile-menu');
-//     menu.classList.toggle('hidden');
-// });
-
-// function toggleDropdown(dropdownId) {
-//     const dropdown = document.getElementById(dropdownId);
-//     dropdown.classList.toggle('hidden');
-// }
-
-// function showContent(contentId) {
-//     // Hide all content divs
-//     const contents = document.querySelectorAll('[id^="content"]');
-//     contents.forEach(content => content.classList.add('hidden'));
-        
-//     // Show the selected content
-//     document.getElementById(contentId).classList.remove('hidden');
-// }
-
-// Close dropdowns when clicking outside
-// document.addEventListener('click', function(event) {
-//     const mobileMenu = document.getElementById('mobile-menu');
-//     const menuToggle = document.getElementById('menu-toggle');
-    
-//     if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-//         mobileMenu.classList.add('hidden');
-//         document.querySelectorAll('#mobile-menu ul').forEach(dropdown => {
-//             dropdown.classList.add('hidden');
-//         });
-//     }
-// });
-
-// End Navbar script for mobile toggle
-
-// contact form validation and submition
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        submitContactForm('contactForm');
-    });
-
-   
-});
-
-function validateForm(formData) {
-    let name = formData.get('name').trim();
-    let email = formData.get('email').trim();
-    let phone = formData.get('phone').trim();
-    let message = formData.get('message').trim();
-
-    if (!name || !email || !phone || !message) {
-        return false;
-    }
-    return true;
-}
-
-function submitContactForm(formId) {
-    let form = document.getElementById(formId);
-    let formData = new FormData(form);
-    let submitButton = form.querySelector('button[type="submit"]');
-
-    if (!validateForm(formData)) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-
-    // Disable the form and button, change button text, and add loading icon
-    form.querySelectorAll('input, button, textarea').forEach(element => {
-        element.disabled = true;
-    });
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:4001/send-email', true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4) {
-            // Re-enable the form and button, reset button text
-            form.querySelectorAll('input, button, textarea').forEach(element => {
-                element.disabled = false;
-            });
-            submitButton.innerHTML = 'SEND MESSAGE';
-
-            if (xhr.status == 200) {
-                alert('Your message has been sent successfully.');
-                form.reset();
-            } else {
-                alert('There was an error sending your message.');
-            }
-        }
-    };
-    xhr.send(formData);
-}
-
-
-// inner pages form 
-
-
-
-document.getElementById('contactForm2').addEventListener('submit', function(e) {
-  e.preventDefault();
-  submitContactForm('contactForm2');
-});
-
-function validateQuoteForm(formData) {
-let contact_name = formData.get('contact_name').trim();
-let company_name = formData.get('company_name').trim();
-let email = formData.get('email').trim();
-let phone = formData.get('phone').trim();
-let exhibition_name = formData.get('exhibition_name').trim();
-let booth_size = formData.get('booth_size').trim();
-
-let message = formData.get('message').trim(); // Ensure message field is included
-
-if (!contact_name || ! company_name || !email || !phone || !exhibition_name || !booth_size || !message) {
-  return false;
-}
-return true;
-}
-
-function submitContactForm(formId) {
-  let form = document.getElementById(formId);
-  let formData = new FormData(form);
-  let submitButton = form.querySelector('button[type="submit"]');
-
-if (!validateQuoteForm(formData)) {
-  alert('Please fill in all required fields.');
-  return;
-}
-
-// Serialize FormData to JSON
-let jsonFormData = {};
-formData.forEach((value, key) => {
-  jsonFormData[key] = value;
-});
-
-// Disable form elements and show loading state
-form.querySelectorAll('input, button, textarea, select').forEach(element => {
-  element.disabled = true;
-});
-submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-let xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://localhost:4001/send-quote', true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-
-xhr.onreadystatechange = function () {
-  if (xhr.readyState == 4) {
-      // Re-enable form elements and reset button text
-      form.querySelectorAll('input, button, textarea, select').forEach(element => {
-          element.disabled = false;
-      });
-      submitButton.innerHTML = 'SEND';
-
-      if (xhr.status == 200) {
-          alert('Your message has been sent successfully.');
-          form.reset();
-      } else {
-          alert('There was an error sending your message.');
-      }
-  }
-};
-
-// Send JSON data
-xhr.send(JSON.stringify(jsonFormData));
-}
-
-
-
 // homepage tabs
 
 function openTab(tabId) {
@@ -223,36 +50,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // swiperslider
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-      autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      "@0.00": {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      "@0.75": {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      "@1.00": {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
-    },
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.querySelector(".mySwiper")) {
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+          },
+          autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          },
+          breakpoints: {
+              "@0.00": {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+              },
+              "@0.75": {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+              },
+              "@1.00": {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+              },
+              "@1.50": {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+              },
+          },
+      });
+  }
+});
 
 
 
@@ -302,3 +133,179 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+
+
+// contact form validation and form submition
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Contact form submissions
+  document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitContactForm('contactForm');
+  });
+
+  // Fetch client IP address
+  async function getClientIp() {
+      try {
+          const response = await fetch('https://api.ipify.org?format=json');
+          const data = await response.json();
+          return data.ip;
+      } catch (error) {
+          console.error('Error fetching IP address:', error);
+          return '';
+      }
+  }
+
+  function validateForm(formData) {
+      let name = formData.get('name').trim();
+      let email = formData.get('email').trim();
+      let phone = formData.get('phone').trim();
+      let message = formData.get('message').trim();
+
+      if (!name || !email || !phone || !message) {
+          return false;
+      }
+      return true;
+  }
+
+  async function submitContactForm(formId) {
+      let form = document.getElementById(formId);
+      let formData = new FormData(form);
+      let submitButton = form.querySelector('button[type="submit"]');
+
+      if (!validateForm(formData)) {
+          alert('Please fill in all required fields.');
+          return;
+      }
+
+      // Get client IP and clean page URL
+      const clientIp = await getClientIp();
+      const pageUrl = `${window.location.origin}${window.location.pathname}`;
+
+      // Serialize FormData to JSON and include IP and URL
+      let jsonFormData = {};
+      formData.forEach((value, key) => {
+          jsonFormData[key] = value;
+      });
+      jsonFormData['ip'] = clientIp;
+      jsonFormData['pageUrl'] = pageUrl;
+
+      // Disable the form and button, change button text, and add loading icon
+      form.querySelectorAll('input, button, textarea').forEach(element => {
+          element.disabled = true;
+      });
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+      let xhr = new XMLHttpRequest();
+      xhr.open('POST', 'http://localhost:4002/send-email', true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4) {
+              // Re-enable the form and button, reset button text
+              form.querySelectorAll('input, button, textarea').forEach(element => {
+                  element.disabled = false;
+              });
+              submitButton.innerHTML = 'Submit';
+
+              if (xhr.status == 200) {
+                  alert('Your message has been sent successfully.');
+                  form.reset();
+                  // Reload page to pure URL
+                  window.location.href = pageUrl;
+              } else {
+                  alert('There was an error sending your message.');
+              }
+          }
+      };
+
+      // Send JSON data
+      xhr.send(JSON.stringify(jsonFormData));
+  }
+});
+
+
+// contact form two
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('contactForm2')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitContactForm2();
+    });
+
+    
+    // Fetch client IP address
+    async function getClientIp() {
+      try {
+          const response = await fetch('https://api.ipify.org?format=json');
+          const data = await response.json();
+          return data.ip;
+      } catch (error) {
+          console.error('Error fetching IP address:', error);
+          return '';
+      }
+  }
+
+    function validateForm2(formData) {
+        let requiredFields = ['fullname', 'company_name', 'email', 'exhibition_name', 'boothSize', 'phone', 'message'];
+        
+        for (let field of requiredFields) {
+            if (!formData.get(field)?.trim()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    async function submitContactForm2() {
+        let form = document.getElementById('contactForm2');
+        let formData = new FormData(form);
+        let submitButton = form.querySelector('button[type="submit"]');
+
+        if (!validateForm2(formData)) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // Get client IP and clean page URL
+        const clientIp = await getClientIp();
+        const pageUrl = `${window.location.origin}${window.location.pathname}`;
+
+        // Append IP and URL to form data
+        formData.append('ip', clientIp);
+        formData.append('pageUrl', pageUrl);
+
+        // Disable the form and button, change button text, and add loading icon
+        form.querySelectorAll('input, button, textarea').forEach(element => {
+            element.disabled = true;
+        });
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:4002/send-quote', true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                // Re-enable the form and button, reset button text
+                form.querySelectorAll('input, button, textarea').forEach(element => {
+                    element.disabled = false;
+                });
+                submitButton.innerHTML = 'Submit';
+
+                if (xhr.status == 200) {
+                    alert('Your message has been sent successfully.');
+                    form.reset();
+                    // Reload page to pure URL
+                    window.location.href = pageUrl;
+                } else {
+                    alert('There was an error sending your message.');
+                }
+            }
+        };
+
+        // Send form data
+        xhr.send(formData);
+    }
+});
+
