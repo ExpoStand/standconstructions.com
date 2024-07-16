@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
       let xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:4002/send-email', true);
+      xhr.open('POST', 'https://standconstructions-mail.trade-pros.org/send-email', true);
       xhr.setRequestHeader('Content-Type', 'application/json');
 
       xhr.onreadystatechange = function () {
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost:4002/send-quote', true);
+        xhr.open('POST', 'https://standconstructions-mail.trade-pros.org/send-quote', true);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
