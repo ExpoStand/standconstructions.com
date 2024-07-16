@@ -815,6 +815,41 @@
             class="text-white text-bold">Digitalfyx</a>. All Rights Reserved.</p>
 </div>
 <!-- /Footer-->
+<!-- Modal Structure -->
+<div id="customModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden" style="z-index: 1000;">
+    <div class="relative bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-5xl mx-auto flex justify-center items-center" style="max-height: 90vh;">
+        <!-- Close Button -->
+        <button onclick="closeCustomModal()" class="absolute top-4 right-4 text-white text-2xl z-10 bg-black rounded-full px-3 py-1">
+            <i class="fas fa-times"></i>
+        </button>
+        <!-- Slides -->
+        <div class="custom-slide">
+            <img src="../../assets/images/portfolio/one.webp" loading="lazy" alt="Slide 1" class="custom-image">
+        </div>
+        <div class="custom-slide hidden">
+            <img src="../../assets/images/portfolio/two.webp" loading="lazy" alt="Slide 2" class="custom-image">
+        </div>
+        <div class="custom-slide hidden">
+            <img src="../../assets/images/portfolio/three.webp" loading="lazy" alt="Slide 3" class="custom-image">
+        </div>
+        <div class="custom-slide hidden">
+            <img src="../../assets/images/portfolio/four.webp" loading="lazy" alt="Slide 4" class="custom-image">
+        </div>
+        <div class="custom-slide hidden">
+            <img src="../../assets/images/portfolio/five.webp" loading="lazy" alt="Slide 5" class="custom-image">
+        </div>
+        <div class="custom-slide hidden">
+            <img src="../../assets/images/portfolio/six.webp" loading="lazy" alt="Slide 6" class="custom-image">
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="custom-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 z-20" onclick="changeCustomSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="custom-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 z-20" onclick="changeCustomSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../../assets/js/script.js"></script>

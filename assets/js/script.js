@@ -93,7 +93,7 @@ const customSlides = document.querySelectorAll('.custom-slide');
 
 function showCustomSlide(index) {
     customSlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+        slide.classList.toggle('hidden', i !== index);
     });
 }
 
@@ -103,12 +103,19 @@ function changeCustomSlide(step) {
 }
 
 function openCustomModal() {
+    customCurrentSlide = 0;  // Reset to the first slide when opening the modal
+    showCustomSlide(customCurrentSlide);
     document.getElementById('customModal').classList.remove('hidden');
 }
 
 function closeCustomModal() {
     document.getElementById('customModal').classList.add('hidden');
 }
+
+// Initialize the first slide as visible
+showCustomSlide(customCurrentSlide);
+
+
 
 
   

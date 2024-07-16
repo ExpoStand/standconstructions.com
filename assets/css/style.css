@@ -21,7 +21,7 @@
  
   }
   .work-process{
-    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/2149908695.jpg)no-repeat  center/cover;
+    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/2149908695.webp)no-repeat  center/cover;
     background-attachment: fixed;
   }
   main{
@@ -988,3 +988,6 @@ header {
   background:  linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/cities_images/berlin-min.jpg) no-repeat top center/cover;
   background-attachment: fixed;
 }
+
+/* custome model */
+
