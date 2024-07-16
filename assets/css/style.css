@@ -250,6 +250,7 @@ form {
 .input-container {
   position: relative;
   margin: 0.1rem 0;
+  /* margin-top: 20px; */
 }
 
 .input {
@@ -498,6 +499,13 @@ textarea.input {
   .social-media {
     padding: 1.5rem 0 0 0;
   }
+ 
+    .circle.one {
+     
+      top: 28rem;
+      right: 6px;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -541,6 +549,7 @@ textarea.input {
 
   .input {
     padding: 0.45rem 1.2rem;
+    margin: 5px 0;
   }
 
   .btn {
@@ -971,4 +980,11 @@ header {
     opacity: 0;
     transform: translateY(15px);
   }
+}
+/* blog background */
+
+
+.blog{
+  background:  linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/cities_images/berlin-min.jpg) no-repeat top center/cover;
+  background-attachment: fixed;
 }

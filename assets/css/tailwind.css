@@ -582,6 +582,17 @@ video {
   left: 0px;
 }
 
+<<<<<<< HEAD
+=======
+.left-2\/3 {
+  left: 66.666667%;
+}
+
+.left-3\/4 {
+  left: 75%;
+}
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .left-4 {
   left: 1rem;
 }
@@ -646,6 +657,10 @@ video {
   grid-column-start: 2;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -654,6 +669,18 @@ video {
   margin: 1.25rem;
 }
 
+<<<<<<< HEAD
+=======
+.m-6 {
+  margin: 1.5rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -705,6 +732,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -713,6 +744,17 @@ video {
   margin-bottom: 1.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -731,6 +773,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-44 {
+  margin-top: 11rem;
 }
 
 .mt-5 {
@@ -849,6 +895,13 @@ video {
   max-width: 64rem;
 }
 
+<<<<<<< HEAD
+=======
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .border-collapse {
   border-collapse: collapse;
 }
@@ -921,10 +974,6 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -1252,6 +1301,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1399,6 +1453,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-blue-300 {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
+}
+
 .text-blue-400 {
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
@@ -1409,6 +1468,14 @@ video {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+<<<<<<< HEAD
+=======
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .text-blue-950 {
   --tw-text-opacity: 1;
   color: rgb(23 37 84 / var(--tw-text-opacity));
@@ -1456,11 +1523,19 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-cyan-500\/50 {
+  --tw-shadow-color: rgb(6 182 212 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+<<<<<<< HEAD
+=======
 .shadow-indigo-500\/40 {
   --tw-shadow-color: rgb(99 102 241 / 0.4);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
 .backdrop-blur {
   --tw-backdrop-blur: blur(8px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1617,10 +1692,40 @@ video {
     margin: 2.5rem;
   }
 
+<<<<<<< HEAD
+=======
+  .md\:m-5 {
+    margin: 1.25rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
   .md\:mt-10 {
     margin-top: 2.5rem;
   }
 
+<<<<<<< HEAD
+=======
+  .md\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
+  .md\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .md\:mt-44 {
+    margin-top: 11rem;
+  }
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
   .md\:block {
     display: block;
   }
@@ -1669,6 +1774,10 @@ video {
     justify-content: center;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:gap-4 {
     gap: 1rem;
   }
@@ -1685,11 +1794,31 @@ video {
     padding: 5rem;
   }
 
+  .md\:p-36 {
+    padding: 9rem;
+  }
+
+  .md\:p-48 {
+    padding: 12rem;
+  }
+
+  .md\:p-5 {
+    padding: 1.25rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 
+<<<<<<< HEAD
+=======
+  .md\:px-\[10\%\] {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+>>>>>>> dfdabd7be4ddca23d601afefcef8113a954fe7c9
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
