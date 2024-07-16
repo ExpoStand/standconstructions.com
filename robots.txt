@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://standconstructions.com/sitemap.xml
+Sitemap: https://standconstructions.com/post.xml
+Sitemap: https://standconstructions.com/cities.xml
+Sitemap: https://standconstructions.com/country.xml
