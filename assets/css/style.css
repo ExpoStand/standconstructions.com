@@ -67,13 +67,14 @@
   transform: translate(-50%, -50%);
   border: 2px solid black;
   border-radius: 5em;
-  background-color: rgb(255, 201, 154);
+  background-color: rgb(154, 205, 255);
   padding: 0.75rem;
   text-decoration: none;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: bold;
   color: black;
+  font-size: 11px;
   opacity: 0;
   transition-property: all;
   transition-duration: 500ms;
