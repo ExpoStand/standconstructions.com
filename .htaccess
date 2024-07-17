@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
+
 # Permanent redirects
 Redirect 301 /exhibition-stand-builder-in-berlin/ /blogs/exhibition-stand-builder-in-berlin/
 Redirect 301 /stand-design-company-germany/ /blogs/stand-design-company-germany/
