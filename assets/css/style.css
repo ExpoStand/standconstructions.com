@@ -6,17 +6,17 @@
     display: block;
   }
   .about_ussection{
-    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/germany.jpg)no-repeat center/cover;
+    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/germany.webp)no-repeat center/cover;
     background-attachment: fixed;
 
   }
 
   .wrap-1{
-    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/germany.jpg)no-repeat center/cover;
+    background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/germany.webp)no-repeat center/cover;
     background-attachment: fixed;
   } 
   .hero-section{
-    background: url(../images/banner_images/homebanner.png) no-repeat top center/cover;
+    background: url(../images/banner_images/homebanner.webp) no-repeat top center/cover;
   background-attachment: fixed;
  
   }
@@ -93,7 +93,7 @@
 /* Counterup */
 
 .counterrs{
-  background:  linear-gradient(180deg, #000a9394 0%, #0076f9c7 100%),url(../images/logos/counter.jpg) no-repeat  center/ cover;
+  background:  linear-gradient(180deg, #000a9394 0%, #0076f9c7 100%),url(../images/logos/counter.webp) no-repeat  center/ cover;
   background-attachment: fixed;
 }
 .counterblur{backdrop-filter: blur(16px);}
@@ -986,7 +986,7 @@ header {
 
 
 .blog{
-  background:  linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/cities_images/berlin-min.jpg) no-repeat top center/cover;
+  background:  linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/cities_images/berlin-min.webp) no-repeat top center/cover;
   background-attachment: fixed;
 }
 
