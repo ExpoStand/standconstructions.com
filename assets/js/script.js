@@ -146,116 +146,25 @@ inputs.forEach((input) => {
 // contact form validation and form submition
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Contact form submissions
-  document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      submitContactForm('contactForm');
-  });
-
-  // Fetch client IP address
-  async function getClientIp() {
-      try {
-          const response = await fetch('https://api.ipify.org?format=json');
-          const data = await response.json();
-          return data.ip;
-      } catch (error) {
-          console.error('Error fetching IP address:', error);
-          return '';
-      }
-  }
-
-  function validateForm(formData) {
-      let name = formData.get('name').trim();
-      let email = formData.get('email').trim();
-      let phone = formData.get('phone').trim();
-      let message = formData.get('message').trim();
-
-      if (!name || !email || !phone || !message) {
-          return false;
-      }
-      return true;
-  }
-
-  async function submitContactForm(formId) {
-      let form = document.getElementById(formId);
-      let formData = new FormData(form);
-      let submitButton = form.querySelector('button[type="submit"]');
-
-      if (!validateForm(formData)) {
-          alert('Please fill in all required fields.');
-          return;
-      }
-
-      // Get client IP and clean page URL
-      const clientIp = await getClientIp();
-      const pageUrl = `${window.location.origin}${window.location.pathname}`;
-
-      // Serialize FormData to JSON and include IP and URL
-      let jsonFormData = {};
-      formData.forEach((value, key) => {
-          jsonFormData[key] = value;
-      });
-      jsonFormData['ip'] = clientIp;
-      jsonFormData['pageUrl'] = pageUrl;
-
-      // Disable the form and button, change button text, and add loading icon
-      form.querySelectorAll('input, button, textarea').forEach(element => {
-          element.disabled = true;
-      });
-      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-      let xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://standconstructions-mail.trade-pros.org/send-email', true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-
-      xhr.onreadystatechange = function () {
-          if (xhr.readyState == 4) {
-              // Re-enable the form and button, reset button text
-              form.querySelectorAll('input, button, textarea').forEach(element => {
-                  element.disabled = false;
-              });
-              submitButton.innerHTML = 'Submit';
-
-              if (xhr.status == 200) {
-                  alert('Your message has been sent successfully.');
-                  form.reset();
-                  // Reload page to pure URL
-                  window.location.href = pageUrl;
-              } else {
-                  alert('There was an error sending your message.');
-              }
-          }
-      };
-
-      // Send JSON data
-      xhr.send(JSON.stringify(jsonFormData));
-  }
-});
-
-
-// contact form two
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('contactForm2')?.addEventListener('submit', function(e) {
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
         e.preventDefault();
-        submitContactForm2();
+        submitContactForm();
     });
 
-    
     // Fetch client IP address
     async function getClientIp() {
-      try {
-          const response = await fetch('https://api.ipify.org?format=json');
-          const data = await response.json();
-          return data.ip;
-      } catch (error) {
-          console.error('Error fetching IP address:', error);
-          return '';
-      }
-  }
+        try {
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            return data.ip;
+        } catch (error) {
+            console.error('Error fetching IP address:', error);
+            return '';
+        }
+    }
 
-    function validateForm2(formData) {
-        let requiredFields = ['fullname', 'company_name', 'email', 'exhibition_name', 'boothSize', 'phone', 'message'];
+    function validateForm(formData) {
+        let requiredFields = ['fullname', 'email', 'phone', 'city', 'company_name', 'exhibition_name', 'stand_size', 'budget', 'message'];
         
         for (let field of requiredFields) {
             if (!formData.get(field)?.trim()) {
@@ -265,12 +174,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-    async function submitContactForm2() {
-        let form = document.getElementById('contactForm2');
+    async function submitContactForm() {
+        let form = document.getElementById('contactForm');
         let formData = new FormData(form);
         let submitButton = form.querySelector('button[type="submit"]');
 
-        if (!validateForm2(formData)) {
+        if (!validateForm(formData)) {
             alert('Please fill in all required fields.');
             return;
         }
@@ -290,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://standconstructions-mail.trade-pros.org/send-quote', true);
+        xhr.open('POST', 'http://localhost:4002/send-quote', true);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
@@ -315,4 +224,6 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.send(formData);
     }
 });
+
+
 

@@ -10,7 +10,7 @@
     <link rel="icon" href="/assets/images/logos/fevicon-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/assets/images/logos/fevicon-192x192.png" />
 	<meta name="description" content="Stand Constructions is a leading exhibition stand builder in Berlin. Discover the top 6 reasons that have made us the leaders in the industry." />
-	<link rel="canonical" href="https://www.standconstructions.com/exhibition-stand-builder-in-berlin/" />
+	<link rel="canonical" href="https://www.standconstructions.com/blogs/exhibition-stand-builder-in-berlin/" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="6 Reasons to Choose Stand Constructions as Your Exhibition Stand Builder in Berlin" />
@@ -257,53 +257,65 @@
                                 <span class="circle two"></span>
 
 
-                                <form action="index.html" autocomplete="off">
-                                    <h3 class="title">Get Free Quote</h3>
-
+                                <form action="index.html" autocomplete="off" id="contactForm">
+                                    <h3 class="title">Send Us a Message</h3>
+        
                                     <div class="md:grid grid-cols-2 md:gap-4 ">
                                         <div class="input-container ">
-                                            <input type="text" name="name" class="input" />
+                                            <input type="text" name="fullname" class="input" required/>
                                             <label for="">Contact Name</label>
                                             <span>Contact Name</span>
                                         </div>
+                                        
                                         <div class="input-container">
-                                            <input type="text" name="name" class="input" />
-                                            <label for="">Company Name</label>
-                                            <span>Company Name</span>
-                                        </div>
-                                        <div class="input-container">
-                                            <input type="email" name="email" class="input" />
+                                            <input type="email" name="email" class="input" required/>
                                             <label for="">Email</label>
                                             <span>Email</span>
                                         </div>
                                         <div class="input-container">
-                                            <input type="text" name="exhibition-name" class="input" />
-                                            <label for="">Exhibition Name</label>
-                                            <span>Exhibition Name</span>
-                                        </div>
-                                        <div class="input-container">
-                                            <input type="email" name="booth-size" class="input" />
-                                            <label for="">Booth Size</label>
-                                            <span>Booth Size</span>
-                                        </div>
-                                        <div class="input-container">
-                                            <input type="tel" name="phone" class="input" />
+                                            <input type="tel" name="phone" class="input" required/>
                                             <label for="">Phone</label>
                                             <span>Phone</span>
                                         </div>
-
+                                        <div class="input-container">
+                                            <input type="text" name="city" class="input" />
+                                            <label for="">City</label>
+                                            <span>City</span>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" name="company_name" class="input" re/>
+                                            <label for="">Company Name</label>
+                                            <span>Company Name</span>
+                                        </div>
+                                        
+                                        <div class="input-container">
+                                            <input type="text" name="exhibition_name" class="input" />
+                                            <label for="">Exhibition Name</label>
+                                            <span>Exhibition Name</span>
+                                        </div>
+                                        
+                                        <div class="input-container">
+                                            <input type="text" name="stand_size" class="input" />
+                                            <label for="">Stand Size</label>
+                                            <span>Stand Size</span>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" name="budget" class="input" />
+                                            <label for="">Budget</label>
+                                            <span>Budget</span>
+                                        </div>
                                     </div>
                                     <br>
-                                    <input type="file" name="file" required="required" aria-required="true"
-                                        multiple="multiple">
+                                    <input type="file" name="attachment" accept="image/*"
+                                        aria-required="true" multiple />
                                     <br>
                                     <br>
                                     <div class="input-container textarea">
-                                        <textarea name="message" class="input"></textarea>
+                                        <textarea name="message" class="input" required></textarea>
                                         <label for="">Message</label>
                                         <span>Message</span>
                                     </div>
-                                    <input type="submit" value="Send" class="btn" />
+                                    <button type="submit" class="btn">Submit</button>
                                 </form>
                             </div>
                         </div>

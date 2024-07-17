@@ -694,53 +694,65 @@
                                 <span class="circle two"></span>
 
 
-                                <form action="index.html" autocomplete="off" id="contactForm2">
+                                <form action="index.html" autocomplete="off" id="contactForm">
                                     <h3 class="title">Send Us a Message</h3>
-
+        
                                     <div class="md:grid grid-cols-2 md:gap-4 ">
                                         <div class="input-container ">
-                                            <input type="text" name="contact_name" class="input" />
+                                            <input type="text" name="fullname" class="input" required/>
                                             <label for="">Contact Name</label>
                                             <span>Contact Name</span>
                                         </div>
+                                        
                                         <div class="input-container">
-                                            <input type="text" name="company_name" class="input" />
-                                            <label for="">Company Name</label>
-                                            <span>Company Name</span>
-                                        </div>
-                                        <div class="input-container">
-                                            <input type="email" name="email" class="input" />
+                                            <input type="email" name="email" class="input" required/>
                                             <label for="">Email</label>
                                             <span>Email</span>
                                         </div>
+                                        <div class="input-container">
+                                            <input type="tel" name="phone" class="input" required/>
+                                            <label for="">Phone</label>
+                                            <span>Phone</span>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" name="city" class="input" />
+                                            <label for="">City</label>
+                                            <span>City</span>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" name="company_name" class="input" re/>
+                                            <label for="">Company Name</label>
+                                            <span>Company Name</span>
+                                        </div>
+                                        
                                         <div class="input-container">
                                             <input type="text" name="exhibition_name" class="input" />
                                             <label for="">Exhibition Name</label>
                                             <span>Exhibition Name</span>
                                         </div>
+                                        
                                         <div class="input-container">
-                                            <input type="text" name="booth_size" class="input" />
-                                            <label for="">Booth Size</label>
-                                            <span>Booth Size</span>
+                                            <input type="text" name="stand_size" class="input" />
+                                            <label for="">Stand Size</label>
+                                            <span>Stand Size</span>
                                         </div>
                                         <div class="input-container">
-                                            <input type="tel" name="phone" class="input" />
-                                            <label for="">Phone</label>
-                                            <span>Phone</span>
+                                            <input type="text" name="budget" class="input" />
+                                            <label for="">Budget</label>
+                                            <span>Budget</span>
                                         </div>
-
                                     </div>
                                     <br>
-                                    <input type="file" name="attachment" accept="image/*" required="required"
+                                    <input type="file" name="attachment" accept="image/*"
                                         aria-required="true" multiple />
                                     <br>
                                     <br>
                                     <div class="input-container textarea">
-                                        <textarea name="message" class="input"></textarea>
+                                        <textarea name="message" class="input" required></textarea>
                                         <label for="">Message</label>
                                         <span>Message</span>
                                     </div>
-                                    <button type="submit" class="btn">submit</button>
+                                    <button type="submit" class="btn">Submit</button>
                                 </form>
                             </div>
                         </div>

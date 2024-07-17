@@ -990,5 +990,9 @@ header {
   background-attachment: fixed;
 }
 
-/* custome model */
+/* custome manupulation */
+
+.swiper-button-next, .swiper-button-prev{
+  display: none !important;
+}
 
