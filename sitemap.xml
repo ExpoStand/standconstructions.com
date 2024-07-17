@@ -24,9 +24,4 @@
 <priority>1.0</priority>
 <changefreq>daily</changefreq>
 </url>
-<url>
-<loc>https://www.standconstructions.com/cities.xml</loc>
-<priority>1.0</priority>
-<changefreq>daily</changefreq>
-</url>
 </urlset>

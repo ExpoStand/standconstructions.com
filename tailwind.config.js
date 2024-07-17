@@ -5,6 +5,7 @@ module.exports = {
     "./blogs/*/*.{html,js}",
     "./*/*.{html,js}",
     "./stand-design-and-booth-construction-company/*/*.{html,js}",
+    "./about-us/*.{html,js}",
     "./404/*.{html,js}"
   ],
   theme: {
