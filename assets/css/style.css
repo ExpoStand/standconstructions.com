@@ -1,3 +1,17 @@
+
+
+h2{
+    color: rgb(75, 85, 99)!important;
+}
+h3{
+  color: rgb(75, 85, 99) !important;
+
+}
+p{
+  color:rgb(107, 114, 128) !important;
+}
+
+
 .tab-content {
     display: none;
   }
@@ -54,6 +68,7 @@
   opacity: 0;
   transition-property: opacity;
   transition-duration: 200ms;
+  border-radius: 1rem;
 }
 
 .img-box:hover::after {
