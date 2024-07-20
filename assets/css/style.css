@@ -1062,7 +1062,7 @@ header {
 footer {
   padding: 15vmin 2rem;
   background: #2b2e31;
-  background-image: url(https://images.unsplash.com/photo-1575572383319-c1140b59efa8?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  
   background-size: cover;
   background-position: center 60%;
   background-blend-mode: soft-light;
