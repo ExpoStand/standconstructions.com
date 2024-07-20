@@ -117,17 +117,7 @@
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- google tagmanager-->
-    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-MWT0XXBW6V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-MWT0XXBW6V');
-    </script>
+    
     <!-- /google tagmanager-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -1177,9 +1167,47 @@
         </div>
     </div>
     
+
+    <div id="analytics-trigger" style="height: 1px; width: 1px;"></div>
+
+    <script>
+      // Check if IntersectionObserver is supported
+      if ('IntersectionObserver' in window) {
+        let observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            loadAnalytics();
+            observer.disconnect(); // Stop observing after loading the script
+          }
+        });
+  
+        observer.observe(document.getElementById('analytics-trigger'));
+      } else {
+        // Fallback for older browsers
+        window.addEventListener('scroll', loadAnalytics, { once: true });
+        window.addEventListener('load', loadAnalytics, { once: true });
+      }
+  
+      function loadAnalytics() {
+        let script = document.createElement('script');
+        script.async = true;
+        script.defer = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MWT0XXBW6V';
+        document.head.appendChild(script);
+  
+        script.onload = () => {
+          window.dataLayer = window.dataLayer || [];
+  
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+  
+          gtag('js', new Date());
+          gtag('config', 'G-MWT0XXBW6V');
+        };
+      }
+    </script> 
     
-    
-    <!-- main script -->
+<!-- main script -->
      
 <script src="assets/js/script.js" defer></script>
     <!-- /end main script-->
