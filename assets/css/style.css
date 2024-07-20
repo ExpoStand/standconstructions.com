@@ -601,6 +601,7 @@ textarea.input {
   .swiper-slide {
     width: 100% !important;
   }
+
 }
 
 /* About us */
@@ -891,6 +892,9 @@ header {
 
   #check {
     display: block;
+  }
+  footer{
+    position: static !important;
   }
 
   .nav-btn {
