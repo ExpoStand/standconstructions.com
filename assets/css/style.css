@@ -1,16 +1,22 @@
+h1{
+  text-transform: capitalize !important;
+  font-size: 2.125rem !important;
+  font-weight: normal !important;
+}
 h2 {
   color: rgb(75, 85, 99) !important;
   text-transform: capitalize !important;
+  font-size: 1.875rem !important;
+  font-weight: normal !important;
   
 }
 
 h3 {
-  color: rgb(75, 85, 99) !important;
+  /* color: rgb(75, 85, 99) !important; */
   text-transform: capitalize;
+  font-size: 1.5rem !important;
+  font-weight: normal !important;
 
-}
-h1{
-  text-transform: capitalize !important;
 }
 p {
   color: rgb(107, 114, 128) !important;
@@ -37,7 +43,7 @@ p {
 }
 
 .hero-section {
-  background: url(../images/banner_images/homebanner2.webp) no-repeat top center/cover;
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/banner_images/homepageback.webp) no-repeat top center/cover;
   background-attachment: fixed;
 
 }
@@ -47,6 +53,10 @@ p {
   .hero-section {
     background-image: none;
     background-color: #010A94;
+  }
+  h2{font-size: 1.125rem !important;}
+  h3{
+    font-size: 1.100rem !important;
   }
 }
 
@@ -85,7 +95,7 @@ z-index: 1;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color:  rgb(0 0 0 / 67%);
   opacity: 0;
   transition-property: opacity;
   transition-duration: 200ms;
@@ -251,7 +261,7 @@ z-index: 1;
 }
 
 .contact-form {
-  background-color: #0076F9;
+  background-color: #000A93;
   position: relative;
 }
 
@@ -492,7 +502,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #0076F9, #769ecd);
+  background: linear-gradient(to bottom, #000A93, #769ecd);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -698,7 +708,9 @@ a:active {
   --clr-nav-hover: #1E6F5C;
   --clr-dropdown-hov: #289672;
   --clr-dropdown-link-hov: #29BB89;
-  --clr-light: #03a9f5;
+  --clr-light:#000A93;
+  --clr-white:#fff;
+
 }
 
 ul {
@@ -709,15 +721,22 @@ a {
   text-decoration: none;
 }
 
-header {
-  position: sticky;
-  top: 0px;
-  background-color: var(--clr-bg-header);
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
   padding: 10px 0;
-  box-shadow: 0px 15px 10px -15px #111;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  z-index: 1000;
 }
+#header.scrolled {
+  background-color: #333; /* Change to your desired color */
+color: black;
+box-shadow: 0px 4px 7px #777;
+}
+
 
 
 
@@ -737,7 +756,7 @@ header {
 
 .nav-link>a {
   line-height: 3rem;
-  color: var(--clr-light);
+  color: var(--clr-white);
   padding: 0 .8rem;
   letter-spacing: 1px;
   font-size: 1rem;

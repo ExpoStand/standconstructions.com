@@ -582,12 +582,8 @@ video {
   left: 0px;
 }
 
-.left-2\/3 {
-  left: 66.666667%;
-}
-
-.left-3\/4 {
-  left: 75%;
+.left-1 {
+  left: 0.25rem;
 }
 
 .left-4 {
@@ -596,6 +592,10 @@ video {
 
 .left-44 {
   left: 11rem;
+}
+
+.left-52 {
+  left: 13rem;
 }
 
 .right-0 {
@@ -618,8 +618,20 @@ video {
   top: 1.25rem;
 }
 
+.top-\[-5rem\] {
+  top: -5rem;
+}
+
 .top-\[-88px\] {
   top: -88px;
+}
+
+.top-\[17rem\] {
+  top: 17rem;
+}
+
+.top-\[1rem\] {
+  top: 1rem;
 }
 
 .top-\[9rem\] {
@@ -773,16 +785,16 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-56 {
-  margin-top: 14rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
 
 .mt-7 {
   margin-top: 1.75rem;
+}
+
+.mt-96 {
+  margin-top: 24rem;
 }
 
 .block {
@@ -1461,11 +1473,6 @@ video {
   color: rgb(0 118 249 / var(--tw-text-opacity));
 }
 
-.text-\[\#02D7FF\] {
-  --tw-text-opacity: 1;
-  color: rgb(2 215 255 / var(--tw-text-opacity));
-}
-
 .text-\[\#03a9f5\] {
   --tw-text-opacity: 1;
   color: rgb(3 169 245 / var(--tw-text-opacity));
@@ -1538,6 +1545,11 @@ video {
 
 .text-white\/90 {
   color: rgb(255 255 255 / 0.9);
+}
+
+.text-\[\#000A93\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 10 147 / var(--tw-text-opacity));
 }
 
 .opacity-75 {
@@ -1754,6 +1766,22 @@ video {
     margin-top: 1.25rem;
   }
 
+  .md\:mt-28 {
+    margin-top: 7rem;
+  }
+
+  .md\:mt-36 {
+    margin-top: 9rem;
+  }
+
+  .md\:-mt-28 {
+    margin-top: -7rem;
+  }
+
+  .md\:-mt-40 {
+    margin-top: -10rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1856,11 +1884,6 @@ video {
     padding-right: 10%;
   }
 
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -1883,6 +1906,31 @@ video {
 
   .md\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .md\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .md\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
+  .md\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .md\:pb-\[6rem\] {
+    padding-bottom: 6rem;
+  }
+
+  .md\:pb-\[5rem\] {
+    padding-bottom: 5rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-3xl {
