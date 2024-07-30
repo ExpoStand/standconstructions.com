@@ -1076,8 +1076,9 @@ box-shadow: 0px 4px 7px #777;
 
 
 .blog {
-  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/cities_images/berlin-min.webp) no-repeat top center/cover;
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)), url(../images/banner_images/Bannerhome.jpg) no-repeat top center/cover;
   background-attachment: fixed;
+  height: 70vh;
 }
 
 /* custome manupulation */
