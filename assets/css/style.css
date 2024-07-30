@@ -54,6 +54,9 @@ p {
     background-image: none;
     background-color: #010A94;
   }
+  h1{
+    font-size: 1.5rem !important;
+  }
   h2{font-size: 1.125rem !important;}
   h3{
     font-size: 1.100rem !important;
@@ -250,7 +253,7 @@ z-index: 1;
 
 .form {
   width: 100%;
-  max-width: 820px;
+  max-width: 877px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -426,7 +429,7 @@ textarea.input {
 }
 
 .contact-info {
-  padding: 2.3rem 2.2rem;
+  padding: 2.3rem 1.2rem;
   position: relative;
 }
 
@@ -801,8 +804,8 @@ box-shadow: 0px 4px 7px #777;
 }
 
 .dropdown-link:hover>a {
-  background-color: #0E6A9E;
-  color: #fff;
+  background-color: #fff;
+  color: #000A93;
 }
 
 .dropdown-link:not(:nth-last-child(2)) {
@@ -855,7 +858,7 @@ box-shadow: 0px 4px 7px #777;
   width: 1.6rem;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--clr-light);
+  background-color: #fff;
   position: relative;
   z-index: 1001;
   transition: .5s;
@@ -867,7 +870,7 @@ box-shadow: 0px 4px 7px #777;
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: var(--clr-light);
+  background-color: #fff;
   border-radius: 3px;
   transition: .5s;
 }
@@ -932,7 +935,7 @@ box-shadow: 0px 4px 7px #777;
   .nav-btn {
     position: fixed;
     height: calc(100vh - 3rem);
-    top: 3rem;
+    top: 4rem;
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -957,6 +960,7 @@ box-shadow: 0px 4px 7px #777;
   .nav-links {
     flex: initial;
     width: 100%;
+    background: #000A93;
   }
 
   .nav-links>ul {
