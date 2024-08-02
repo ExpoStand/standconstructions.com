@@ -1114,5 +1114,49 @@ footer {
 
 
 
+.berlin{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/berlin-min.webp) no-repeat top center/ cover;
+}
 
 
+
+.cologne{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/cologne.webp) no-repeat top center/ cover;
+}
+.dortmund{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/dortmund.webp) no-repeat top center/ cover;
+}
+.dusseldorf{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/dusseldorfmin.webp) no-repeat top center/ cover;
+}
+.frankfurt{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/frankfurt-min.webp) no-repeat top center/ cover;
+}
+.hamburg{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/hamburg-min.webp) no-repeat top center/ cover;
+}
+.hannover{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/hannover-min.webp) no-repeat top center/ cover;
+}
+.munich{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/munich-min.webp) no-repeat top center/ cover;
+}
+.nuremberg{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/nuremberg-min.webp) no-repeat top center/ cover;
+}
+.stuttgart{
+  background: linear-gradient(rgb(10 10 10 / 60%), rgb(0 0 0 / 63%)),url(../images/cities_images/stuttgart-min.webp) no-repeat top center/ cover;
+}
+/* counter */
+
+
+.counters div{
+  display: flex;
+  justify-content: space-around;
+
+}
+.counters div .counter{
+  background: red;
+  padding: 30px;
+  margin: 10px;
+}

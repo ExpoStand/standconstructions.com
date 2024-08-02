@@ -14,39 +14,39 @@ function openTab(tabId) {
 // counter up
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var counters = document.querySelectorAll('.counter');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var counters = document.querySelectorAll('.counter');
     
-    counters.forEach(function(counter) {
-        var currentValue = 0;
-        var targetValue = parseInt(counter.innerText);
-        var duration = 4000; // 4 seconds
-        var startTime = null;
+//     counters.forEach(function(counter) {
+//         var currentValue = 0;
+//         var targetValue = parseInt(counter.innerText);
+//         var duration = 4000; // 4 seconds
+//         var startTime = null;
         
-        function updateCounter(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = timestamp - startTime;
+//         function updateCounter(timestamp) {
+//             if (!startTime) startTime = timestamp;
+//             var progress = timestamp - startTime;
             
-            // Calculate current value using easing (in this case, linear)
-            currentValue = Math.ceil(easeLinear(progress, 0, targetValue, duration));
+//             // Calculate current value using easing (in this case, linear)
+//             currentValue = Math.ceil(easeLinear(progress, 0, targetValue, duration));
             
-            counter.innerText = currentValue;
+//             counter.innerText = currentValue;
             
-            // Continue animation if not finished
-            if (progress < duration) {
-                requestAnimationFrame(updateCounter);
-            }
-        }
+//             // Continue animation if not finished
+//             if (progress < duration) {
+//                 requestAnimationFrame(updateCounter);
+//             }
+//         }
         
-        // Start the animation
-        requestAnimationFrame(updateCounter);
-    });
+//         // Start the animation
+//         requestAnimationFrame(updateCounter);
+//     });
     
-    // Easing function - linear
-    function easeLinear(t, b, c, d) {
-        return c * t / d + b;
-    }
-})
+//     // Easing function - linear
+//     function easeLinear(t, b, c, d) {
+//         return c * t / d + b;
+//     }
+// })
 
 // swiperslider
 
@@ -240,4 +240,51 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// js counter
 
+// const counters = document.querySelectorAll(".counters div");
+// const container = document.querySelectorAll(".counters");
+
+
+// let activated = false;
+
+
+
+// window.addEventListener("scroll",()=>{
+
+//     if(
+
+//         pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false
+//     ){
+//         counters.forEach(counter => {
+//             counter.innerText= 0;
+
+//             let count = 0;
+
+//             function updateCount(){
+//                 const target = parseInt(counter.dataset.count);
+//                 if(count < target){
+//                     count++;
+
+//                     counter.innerText = count;
+//                      setTimeout(updateCount, 10)
+//                 }else{
+//                     counter.innerText = target;
+
+//                 }
+//             }
+//             updateCount();
+
+//             activated = true;
+//         });
+//     }else if(
+//         pageYOffset < container.offsetTop - container.offsetHeight - 500 || pageYOffset === 0 && activated === true
+
+//     ){
+//         counters.forEach(counter =>{
+//             counter.innerText = 0;
+//         });
+//         activated  = false;
+
+//     }
+// })
