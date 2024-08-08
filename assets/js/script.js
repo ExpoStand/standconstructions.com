@@ -14,39 +14,42 @@ function openTab(tabId) {
 // counter up
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var counters = document.querySelectorAll('.counter');
-    
-//     counters.forEach(function(counter) {
-//         var currentValue = 0;
-//         var targetValue = parseInt(counter.innerText);
-//         var duration = 4000; // 4 seconds
-//         var startTime = null;
-        
-//         function updateCounter(timestamp) {
-//             if (!startTime) startTime = timestamp;
-//             var progress = timestamp - startTime;
-            
-//             // Calculate current value using easing (in this case, linear)
-//             currentValue = Math.ceil(easeLinear(progress, 0, targetValue, duration));
-            
-//             counter.innerText = currentValue;
-            
-//             // Continue animation if not finished
-//             if (progress < duration) {
-//                 requestAnimationFrame(updateCounter);
-//             }
-//         }
-        
-//         // Start the animation
-//         requestAnimationFrame(updateCounter);
-//     });
-    
-//     // Easing function - linear
-//     function easeLinear(t, b, c, d) {
-//         return c * t / d + b;
-//     }
-// })
+var count = document.getElementsByClassName("count");
+var inc = []
+function intervalFunc() {
+    for (let i = 0; i < count.length; i++) {
+        inc.push(1);
+        if (inc[i] != count[i].getAttribute("max-data")) {
+            inc[i]++;
+
+        }
+        count[i].innerHTML = inc[i]
+    }
+}
+
+var mains = document.getElementById("mains");
+window.onscroll = function () {
+    var timer = setInterval(() => {
+        var topElem = mains.offsetTop;
+        var btmElem = mains.offsetTop + mains.clientHeight;
+        var topScreen = window.pageYOffset;
+        var btmScreen = window.pageYOffset + window.innerHeight;
+        if (btmScreen > topElem && topScreen < btmElem) {
+            intervalFunc()
+
+        } else {
+            clearInterval(timer);
+            for (let i = 0; i < count.length; i++) {
+                count[i].innerHTML = 1;
+
+                inc = [];
+            }
+
+        }
+        intervalFunc();
+    }, 200)
+
+}
 
 // swiperslider
 
@@ -240,51 +243,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// js counter
-
-// const counters = document.querySelectorAll(".counters div");
-// const container = document.querySelectorAll(".counters");
 
 
-// let activated = false;
+//Get all the hyperlink elements
+var links = document.getElementsByTagName("a");
 
-
-
-// window.addEventListener("scroll",()=>{
-
-//     if(
-
-//         pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false
-//     ){
-//         counters.forEach(counter => {
-//             counter.innerText= 0;
-
-//             let count = 0;
-
-//             function updateCount(){
-//                 const target = parseInt(counter.dataset.count);
-//                 if(count < target){
-//                     count++;
-
-//                     counter.innerText = count;
-//                      setTimeout(updateCount, 10)
-//                 }else{
-//                     counter.innerText = target;
-
-//                 }
-//             }
-//             updateCount();
-
-//             activated = true;
-//         });
-//     }else if(
-//         pageYOffset < container.offsetTop - container.offsetHeight - 500 || pageYOffset === 0 && activated === true
-
-//     ){
-//         counters.forEach(counter =>{
-//             counter.innerText = 0;
-//         });
-//         activated  = false;
-
-//     }
-// })
+//Browse the previously created array
+Array.prototype.forEach.call(links, function(elem, index) {
+  //Get the hyperlink target and if it refers to an id go inside condition
+  var elemAttr = elem.getAttribute("href");
+  if(elemAttr && elemAttr.includes("#")) {
+    //Replace the regular action with a scrolling to target on click
+    elem.addEventListener("click", function(ev) {
+      ev.preventDefault();
+      //Scroll to the target element using replace() and regex to find the href's target id
+      document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+          });
+    });
+  }
+});
