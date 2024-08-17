@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+allow: /
 
 Sitemap: https://www.standconstructions.com/sitemap.xml
 Sitemap: https://www.standconstructions.com/post.xml
