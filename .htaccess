@@ -16,3 +16,28 @@ RewriteCond %{REQUEST_URI} !^/404/index\.html$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /404/index.html [L]
+
+# Add Content-Security-Policy header
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'none';"
+</IfModule>
+
+# Add X-Content-Type-Options header
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Add X-Frame-Options header
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Add HTTP Strict-Transport-Security (HSTS) header
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Add Referrer-Policy header
+<IfModule mod_headers.c>
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
