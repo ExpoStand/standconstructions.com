@@ -19,7 +19,7 @@ RewriteRule ^(.*)$ /404/index.html [L]
 
 # Add Content-Security-Policy header
 <IfModule mod_headers.c>
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'none';"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.example.com; style-src 'self' 'unsafe-inline' https://cdn.example.com; img-src 'self' data: https://cdn.example.com; connect-src 'self'; font-src 'self' https://cdn.example.com; frame-src 'none';"
 </IfModule>
 
 # Add X-Content-Type-Options header
