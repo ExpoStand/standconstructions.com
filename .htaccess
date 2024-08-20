@@ -9,6 +9,8 @@ Redirect 301 /exhibition-stand-builder-in-berlin/ /blogs/exhibition-stand-builde
 Redirect 301 /stand-design-company-germany/ /blogs/stand-design-company-germany/
 
 # Custom 404 handling
+RewriteCond %{REQUEST_URI} !^/404/index\.html$ [NC]   # Prevents infinite loop for 404 page
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /404/index.html [L]
+
